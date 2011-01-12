@@ -16,17 +16,17 @@ zipconv.plをチェックアウトしてご利用ください。
 
 # DESCRIPTION
 
-使い方:
-  perl zipconv.pl KEN_ALL.CSV > output.txt
-  perl zipconv.pl --template=Template.txt > output.txt
-  perl zipconv.pl --template=ZipTableDML.txt --prefmst=PrefMST.txt --charset=UTF8 > output.sql
+* 使い方:
+    perl zipconv.pl KEN_ALL.CSV > output.txt
+    perl zipconv.pl --template=Template.txt > output.txt
+    perl zipconv.pl --template=ZipTableDML.txt --prefmst=PrefMST.txt --charset=UTF8 > output.sql
 
-オプション:
-  --template=? 出力テンプレートファイル（未指定時はCSV）
-  --charset=?  出力文字セット（未指定時はCP932）
-  --prefmst=?  都道府県マスタ。（任意）
+* オプション:
+    --template=? 出力テンプレートファイル（未指定時はCSV）
+    --charset=?  出力文字セット（未指定時はCP932）
+    --prefmst=?  都道府県マスタ。（任意）
 
-テンプレート:
+* テンプレート:
   概要:
     1レコードずつテンプレート変数が値に置換されて出力されます。
     レコード間には区切り文字はなにも出力しません。
@@ -63,7 +63,7 @@ KEN_ALL.CSV は郵政サイトからダウンロードしてください。
 * PrefMST.txt 都道府県マスタファイル
 
 以下のコマンドでサンプルを実行できます。
-  perl zipconv.pl --template=ZipTableDML.txt --prefmst=PrefMST.txt --charset=UTF8 > output.sql
+    perl zipconv.pl --template=ZipTableDML.txt --prefmst=PrefMST.txt --charset=UTF8 > output.sql
 
 # CHANGELOG
 
