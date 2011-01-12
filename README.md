@@ -75,4 +75,4 @@ KEN_ALL.CSV は郵政サイトからダウンロードしてください。
 
 # AUTHOR
 
-ryerryer@gmail.com
+* ryer
