@@ -1,0 +1,1 @@
+INSERT INTO t_zip_master(created_at,updated_at,zip1,zip2,usr_prefecture_id,city,town) VALUES(NOW(), NOW(), '%%ZIP1%%', '%%ZIP2%%', %%PREF_ID%%, '%%CITY%% %%TOWN%%');
