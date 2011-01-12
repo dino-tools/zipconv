@@ -16,25 +16,25 @@ zipconv.plをチェックアウトしてご利用ください。
 
 # DESCRIPTION
 
-* 使い方:
+*使い方*
 
     perl zipconv.pl KEN_ALL.CSV > output.txt
     perl zipconv.pl --template=Template.txt > output.txt
     perl zipconv.pl --template=ZipTableDML.txt --prefmst=PrefMST.txt --charset=UTF8 > output.sql
 
-* オプション:
+*オプション*
 
     --template=? 出力テンプレートファイル（未指定時はCSV）
     --charset=?  出力文字セット（未指定時はCP932）
     --prefmst=?  都道府県マスタ。（任意）
 
-* テンプレート:
+*テンプレート*
 
-  概要:
+概要:
     1レコードずつテンプレート変数が値に置換されて出力されます。
     レコード間には区切り文字はなにも出力しません。
   
-  変数:
+変数:
     ROWID     KEN_ALL.CSVの行番号
     ZIP1      郵便番号上桁
     ZIP2      郵便番号下桁
@@ -46,11 +46,11 @@ zipconv.plをチェックアウトしてご利用ください。
     TOWN      町村番地
     TOWN_KANA 町村番地カナ
 
-  例:
+例:
     デフォルトで使われるテンプレートは以下のようなものです。
     %%ROWID%%,%%ZIP1%%,%%ZIP2%%,%%PREF%%,%%PREF_KANA%%,%%CITY%%,%%CITY_KANA%%,%%TOWN%%,%%TOWN_KANA%%<\x0D\x0A>
 
-  都道府県マスタの例:
+都道府県マスタの例:
     ※CP932で記述すること。
     北海道<\t>1<\n>
     青森県<\t>2<\n>
@@ -66,6 +66,7 @@ KEN_ALL.CSV は郵政サイトからダウンロードしてください。
 * PrefMST.txt 都道府県マスタファイル
 
 以下のコマンドでサンプルを実行できます。
+
     perl zipconv.pl --template=ZipTableDML.txt --prefmst=PrefMST.txt --charset=UTF8 > output.sql
 
 # CHANGELOG
