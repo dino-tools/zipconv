@@ -64,7 +64,7 @@ if ($options{'prefmst'}) {
     my $fh = IO::File->new($options{'prefmst'});
     binmode($fh, ":raw:encoding(CP932)" );
     while (my $line = <$fh>) {
-        chomp($line);
+        $line =~ s/\x0D?\x0A$//;
         my($val, $id) = split("\t", $line, 2);
         $PREF2ID{$val} = $id;
     }
