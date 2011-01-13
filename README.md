@@ -25,8 +25,8 @@ zipconv.plをチェックアウトしてご利用ください。
 **使い方**
 
     perl zipconv.pl KEN_ALL.CSV > output.txt
-    perl zipconv.pl --template=Template.txt > output.txt
-    perl zipconv.pl --template=ZipTableDML.txt --prefmst=PrefMST.txt --charset=UTF8 > output.sql
+    perl zipconv.pl KEN_ALL.CSV --template=Template.txt > output.txt
+    perl zipconv.pl KEN_ALL.CSV --template=ZipTableDML.txt --prefmst=PrefMST.txt --charset=UTF8 > output.sql
 
 **オプション**
 
@@ -73,7 +73,7 @@ KEN_ALL.CSV は郵政サイトからダウンロードしてください。
 
 以下のコマンドでサンプルを実行できます。
 
-    perl zipconv.pl --template=ZipTableDML.txt --prefmst=PrefMST.txt --charset=UTF8 > output.sql
+    perl zipconv.pl KEN_ALL.CSV --template=ZipTableDML.txt --prefmst=PrefMST.txt --charset=UTF8 > output.sql
 
 # CHANGELOG
 
